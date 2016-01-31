@@ -22,7 +22,21 @@
 					<div class="panel-body">
 						<div class="input-group">
 							<span class="input-group-addon" id="chart-title">Chart Title</span>
-							<input type="text" class="form-control" aria-describedby="chart-title" ng-model="chartTitle" placeholder="Chart Title Here" ng-init="chartTitle='Nb Calls'"/>
+							<input type="text" class="form-control" aria-describedby="chart-title"
+							       ng-model="chartTitle"
+							       placeholder="Chart Title Here"/>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="center-label">Center Title</span>
+							<input type="text" class="form-control" aria-describedby="center-label"
+							       ng-model="chartCenter"
+							       placeholder="Chart Center Title Here"/>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="sublabel">Center Sub-Title</span>
+							<input type="text" class="form-control" aria-describedby="sublabel"
+							       ng-model="chartCenterSub"
+							       placeholder="Chart Center Subtitle Here"/>
 						</div>
 						<hr/>
 						<h4>Chart Data</h4>
@@ -42,7 +56,7 @@
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-body" id="chart-container">
-						<donut-chart data="chart" style="float: right;"></donut-chart>
+						<donut-chart data="chart" title="chartTitle" center="chartCenter" centersub="chartCenterSub" style="float: right;"></donut-chart>
 					</div>
 				</div>
 			</div>

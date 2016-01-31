@@ -1,3 +1,18 @@
 text {
 	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	stroke: black;
+}
+
+text.title {
+	font: bold 2em 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+text.centertitle {
+	font: bold 2em 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;	
+}
+
+text.centertitle {
+	font: bold 1.1em 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;	
 }
