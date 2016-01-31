@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="lib/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="lib/angular/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="lib/d3/3.5.13/d3.min.js"></script>
+	<script type="text/javascript" src="lib/angular-ui/ui-bootstrap-tpls-1.1.1.min.js"></script>
+	<script type="text/javascript" src="lib/d3nuts/main.js"></script>
+</head>
+<body ng-app="myApp">
+	<div class="container-fluid" ng-controller="MyCtrl">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Pie Chart Maker</h3>
+					</div>
+					<div class="panel-body">
+						<div class="input-group">
+							<span class="input-group-addon" id="chart-title">Chart Title</span>
+							<input type="text" class="form-control" aria-describedby="chart-title" ng-model="chartTitle" placeholder="Chart Title Here" ng-init="chartTitle='Nb Calls'"/>
+						</div>
+						<hr/>
+						<h4>Chart Data</h4>
+						<table class="table">
+							<tbody>
+								<tr ng-repeat="slice in chart track by $index">
+									<td><input type="text" ng-model="slice.label"/></td>
+									<td><input type="number" ng-model="slice.value"/></td>
+									<td><button ng-click="addSlice($index)" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button></td>
+									<td><button ng-click="removeSlice($index)" type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-body" id="chart-container">
+						<donut-chart data="chart" style="float: right;"></donut-chart>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
