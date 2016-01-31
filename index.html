@@ -38,6 +38,11 @@
 							       ng-model="chartCenterSub"
 							       placeholder="Chart Center Subtitle Here"/>
 						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="rotation">Rotate Chart</span>
+							<input type="range" class="form-control" aria-describedby="rotation"
+							       ng-model="chartRotation" />
+						</div>
 						<hr/>
 						<h4>Chart Data</h4>
 						<table class="table">
@@ -56,7 +61,7 @@
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-body" id="chart-container">
-						<donut-chart data="chart" title="chartTitle" center="chartCenter" centersub="chartCenterSub" style="float: right;"></donut-chart>
+						<donut-chart data="chart" title="chartTitle" center="chartCenter" centersub="chartCenterSub" rotation="chartRotation" style="float: right;"></donut-chart>
 					</div>
 				</div>
 			</div>
